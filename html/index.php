@@ -1,15 +1,19 @@
 <?php
 /**
  * Rhythmbox Remote Control via HTTP
- * @author  Simon Lauger <simon@lauger.name>
- * @url     http://blog.simlau.net/
- * @version RC1
+ * @author   Simon Lauger <simon@lauger.name>
+ * @url      http://blog.simlau.net/
+ * @version  1.03
  */
+
+$scriptpath = '/usr/local/bin/rbcontrol';
 
 error_reporting(E_ALL);
 
 function rb_control($cmd, $arg = 0)
 {
+	global $scriptpath;
+
 	// Erlaubte Kommandos
 	$allowed = array('play', 'pause', 'play-pause', 'set-volume',
 			'volume-up', 'volume-down', 'mute', 'unmute',
@@ -21,7 +25,7 @@ function rb_control($cmd, $arg = 0)
 		return false;
 	}
 	
-	$shell_cmd = sprintf('sudo sh rbcontrol.sh %s %s', $cmd, escapeshellarg($arg));
+	$shell_cmd = sprintf('sudo sh %s %s %s', $scriptpath, $cmd, escapeshellarg($arg));
 
 	return shell_exec($shell_cmd);
 }
