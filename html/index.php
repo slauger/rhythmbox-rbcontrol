@@ -25,7 +25,7 @@ function rb_control($cmd, $arg = 0)
 		return false;
 	}
 	
-	$shell_cmd = sprintf('sudo sh %s %s %s', $scriptpath, $cmd, escapeshellarg($arg));
+	$shell_cmd = sprintf('sudo %1s %2s %3s', $scriptpath, $cmd, escapeshellarg($arg));
 
 	return shell_exec($shell_cmd);
 }
@@ -43,6 +43,7 @@ if ($do != '') {
 <html>
 <head>
 	<title>Rhythmbox Control</title>
+	<meta http-equiv="refresh" content="30; />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 	<link title="style" type="text/css" rel="stylesheet" href="iphone.css" />
 </head>
