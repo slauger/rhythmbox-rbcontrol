@@ -1,16 +1,17 @@
-Rhythmbox Remote Control via HTTP
--------
+# Rhythmbox Remote Control via HTTP
+
+Fernsteuerung von Rhythmbox ueber Web (PHP). 
 
 Das Webinterface ist angepasst fuer einen iPod Touch bzw. ein iPhone.
-Das Design laesst sich aber leicht anpassen. ;)
 
-Benoetigte Pakete: 
+## Benoetigte Pakete
+```
   - rhythmbox
   - apache2 (oder ein anderer Webserver)
   - php4 oder php5 (als mod_php oder cgi)
   - sudo
-
-Installation: 
+```
+## Installation
   - PHP Script und HTML/CSS Files irgendwo auf dem Webserver ablegen
 
   - Mittels "sudo visudo" die Datei /etc/sudoers bearbeiten und folgendes eintragen
