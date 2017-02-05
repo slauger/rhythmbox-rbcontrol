@@ -16,7 +16,7 @@ Das Webinterface ist angepasst fuer einen iPod Touch bzw. ein iPhone.
 
   - Mittels "sudo visudo" die Datei /etc/sudoers bearbeiten und folgendes eintragen
 
-    www-data ALL=(ALL) NOPASSWD: /usr/local/bin/rbcontrol
+    `www-data ALL=(ALL) NOPASSWD: /usr/local/bin/rbcontrol`
 
     www-data ist evtl. anzupassen, wenn etwa suexec eingesetzt wird oder ein anderer
     Webserver als Apache2 benutz wird.
